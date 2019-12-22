@@ -1,7 +1,7 @@
-# ludoquimico.github.io
+# Ludo Químico
 
 Repositório da base de dados do jogo Ludo Químico
-
+---
 
 Ludo Químico - v2 (rebuild) 2009-2019.
 Desenvolvido para:
