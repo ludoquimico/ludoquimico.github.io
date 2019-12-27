@@ -1,5 +1,4 @@
-# Ludo Químico
-                                                               
+# Ludo Químico                                                               
 > Repositório da base de dados do jogo Ludo Químico
 
 
