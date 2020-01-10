@@ -112,7 +112,7 @@ input,
 optgroup,
 select,
 textarea {
-  margin: 10;
+  margin: 20;
   font: 30px;
   color: black;
 }
