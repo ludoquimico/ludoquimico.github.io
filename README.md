@@ -13,7 +13,7 @@ manoelguerreiro@yahoo.com.br
 * Ludo Químico - v1 2009.
 Desenvolvido para:
 Ubuntu 9.04 - x86.
-Windows XP, Vista e 7 - x86/64.
+<img src="https://ludoquimico.github.io/img/logo_raspberry.png"></img>Windows XP, Vista e 7 - x86/64.
 Autor: Manoel Guerreiro - IQ (Unesp)
 manoelguerreiro@yahoo.com.br
 
