@@ -1,5 +1,4 @@
-<img src="https://ludoquimico.github.io/img/avatar.png"></img>
-# Ludo Químico                                                               
+<img src="https://ludoquimico.github.io/img/avatar.png"></img>                                                            
 > Repositório da base de dados do jogo Ludo Químico
 
 
