@@ -1,4 +1,4 @@
-# Ludo Químico                                                               
+<img src="https://ludoquimico.github.io/barril.png"></img># Ludo Químico                                                               
 > Repositório da base de dados do jogo Ludo Químico
 
 
