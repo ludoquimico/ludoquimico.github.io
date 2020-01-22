@@ -17,4 +17,3 @@ Desenvolvido para:
 Autor: Manoel Guerreiro - IQ (Unesp)
 manoelguerreiro@yahoo.com.br
 
-
