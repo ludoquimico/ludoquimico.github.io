@@ -66,12 +66,7 @@ xmlhttp.send();
 
 var xmlhttp = new XMLHttpRequest();	
 xmlhttp.onreadystatechange = function() {
-  if (this.readyState == 4 && this.status == 200) {
-    var myArr = JSON.parse(this.responseText);
-	
 document.getElementById("status6").innerHTML = "<br><br> Total:&nbsp&nbsp" + "<b>" + total + "</b>";	
-
-  }
 };
 	
 
