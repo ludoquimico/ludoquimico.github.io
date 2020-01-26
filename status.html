@@ -4,13 +4,15 @@
 
 <script>
 var total = 0;
+	
+var d1,d2,d3,d4,d5,d6 = 0;
 
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr = JSON.parse(this.responseText);
     document.getElementById("status1").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
-	total = total + myArr['download_count'];
+	d1 = myArr['download_count'];
   }
 };
 xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17457239", true);
@@ -21,7 +23,7 @@ xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr = JSON.parse(this.responseText);
     document.getElementById("status2").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
-	total = total + myArr['download_count'];
+	d2 = myArr['download_count'];
   }
 };
 xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17469861", true);
@@ -32,7 +34,7 @@ xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr = JSON.parse(this.responseText);
     document.getElementById("status3").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
-	total = total + myArr['download_count'];
+	d3 = myArr['download_count'];
   }
 };
 xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17469299", true);
@@ -43,7 +45,7 @@ xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr = JSON.parse(this.responseText);
     document.getElementById("status4").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
-	total = total + myArr['download_count'];
+	d4 = myArr['download_count'];
   }
 };
 xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17457240", true);
@@ -56,7 +58,8 @@ xmlhttp.onreadystatechange = function() {
     var myArr = JSON.parse(this.responseText);
 	
     document.getElementById("status5").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
-     total = total + myArr['download_count'];
+     d5 = myArr['download_count'];
+	total = d1 + d2 + d3 + d4 + d5;  
      document.getElementById("status6").innerHTML = "<hr><br><br>Total:&nbsp&nbsp" + "<b>" + total + "</b>";	
 
   }
