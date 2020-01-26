@@ -64,7 +64,9 @@ xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github
 xmlhttp.send();
 	
 var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {	
 	document.getElementById("status6").innerHTML = "<br><br> Total:\t" + "<b>" + total + "</b>";
+}	
 xmlhttp.send();	
 </script>
 
