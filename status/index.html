@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>	
+	
 <script>
 	
 var total = 0;
@@ -54,18 +55,13 @@ var xmlhttp5 = new XMLHttpRequest();
 xmlhttp5.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr5 = JSON.parse(this.responseText);
-	
     document.getElementById("status5").innerHTML = myArr5['name'] + "&nbsp&nbsp" + "<b>" + myArr5['download_count'] + "</b>";
     d5 = parseInt(myArr5['download_count']);
-	  
-	  
-  }
-
-     total = Number(d1) +  Number(d2) +  Number(d3) +  Number(d4) +  Number(d5);
-	  
-     document.getElementById("status6").innerHTML = "<br><br><i>Total</i>:&nbsp&nbsp" + "<b>" + Number(total) + "</b>";	
-	
+  }	
 };
+   total = Number(d1) +  Number(d2) +  Number(d3) +  Number(d4) +  Number(d5);
+   document.getElementById("status6").innerHTML = "<br><br><i>Total</i>:&nbsp&nbsp" + "<b>" + Number(total) + "</b>";	
+	
 	
 xmlhttp5.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17457241", true);
 xmlhttp5.send();	
