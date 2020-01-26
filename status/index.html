@@ -12,8 +12,8 @@ xmlhttp1.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr1 = JSON.parse(this.responseText);
     document.getElementById("status1").innerHTML = myArr1['name'] + "&nbsp&nbsp" + "<b>" + myArr1['download_count'] + "</b>";
-	d1 = parseInt(myArr1['download_count']);
-	  total = total + d1;
+    d1 = parseInt(myArr1['download_count']);
+    total = total + d1;
   }
 };
 xmlhttp1.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17457239", true);
@@ -24,8 +24,8 @@ xmlhttp2.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr2 = JSON.parse(this.responseText);
     document.getElementById("status2").innerHTML = myArr2['name'] + "&nbsp&nbsp" + "<b>" + myArr2['download_count'] + "</b>";
-	d2 = parseInt(myArr2['download_count']);
-	   total = total + d2;
+    d2 = parseInt(myArr2['download_count']);
+    total = total + d2;
   }
 };
 xmlhttp2.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17469861", true);
@@ -36,8 +36,8 @@ xmlhttp3.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr3 = JSON.parse(this.responseText);
     document.getElementById("status3").innerHTML = myArr3['name'] + "&nbsp&nbsp" + "<b>" + myArr3['download_count'] + "</b>";
-	d3 = parseInt(myArr3['download_count']);
-	   total = total + d3;
+    d3 = parseInt(myArr3['download_count']);
+    total = total + d3;
   }
 };
 xmlhttp3.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17469299", true);
@@ -48,8 +48,8 @@ xmlhttp4.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr4 = JSON.parse(this.responseText);
     document.getElementById("status4").innerHTML = myArr4['name'] + "&nbsp&nbsp" + "<b>" + myArr4['download_count'] + "</b>";
-	d4 = parseInt(myArr4['download_count']);
-	   total = total + d4;
+    d4 = parseInt(myArr4['download_count']);
+    total = total + d4;
   }
 };
 xmlhttp4.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17457240", true);
@@ -61,13 +61,23 @@ xmlhttp5.onreadystatechange = function() {
     var myArr5 = JSON.parse(this.responseText);
     document.getElementById("status5").innerHTML = myArr5['name'] + "&nbsp&nbsp" + "<b>" + myArr5['download_count'] + "</b><br><br>";
     d5 = parseInt(myArr5['download_count']);
-   total = total + d5;
-   document.getElementById("status6").innerHTML = Number(total);		  
+    total = total + d5;  
   }	
 };
 xmlhttp5.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17457241", true);
 xmlhttp5.send();	
 
+var xmlhttp6 = new XMLHttpRequest();
+xmlhttp6.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myArr6 = JSON.parse(this.responseText);
+    document.getElementById("status6").innerHTML = Number(total);		  
+  }	
+};
+xmlhttp6.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17457241", true);
+xmlhttp6.send();	
+	
+	
 </script>
 </head>
 
