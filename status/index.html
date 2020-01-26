@@ -8,10 +8,13 @@ var d1,d2,d3,d4,d5,d6 = 0;
 
 var xmlhttp = new XMLHttpRequest();
 var myArr = JSON.parse(this.responseText);
-document.getElementById("status1").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
-d1 = parseInt(myArr['download_count']);
+xmlhttp.onreadystatechange = function() {
+	document.getElementById("status1").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
+	d1 = parseInt(myArr['download_count']);
+};
 xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17457239", true);
 xmlhttp.send();
+	
 
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
