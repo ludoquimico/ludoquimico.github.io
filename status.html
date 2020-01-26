@@ -60,14 +60,12 @@ xmlhttp.onreadystatechange = function() {
   }
 };
 	
-    document.getElementById("status5").innerHTML = "<br><br> Total:\t" + "<b>" + total + "</b>";
-     	
-	
 xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17457241", true);
 xmlhttp.send();
 	
-	
-	
+var xmlhttp = new XMLHttpRequest();
+	document.getElementById("status5").innerHTML = "<br><br> Total:\t" + "<b>" + total + "</b>";
+xmlhttp.send();	
 </script>
 
 <p id="status1"></p>
