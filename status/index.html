@@ -11,7 +11,7 @@ xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr = JSON.parse(this.responseText);
     document.getElementById("status1").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
-	d1 = myArr['download_count'];
+	parseInt(d1) = myArr['download_count'];
   }
 };
 xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17457239", true);
@@ -22,7 +22,7 @@ xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr = JSON.parse(this.responseText);
     document.getElementById("status2").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
-	d2 = myArr['download_count'];
+	parseInt(d2) = myArr['download_count'];
   }
 };
 xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17469861", true);
@@ -33,7 +33,7 @@ xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr = JSON.parse(this.responseText);
     document.getElementById("status3").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
-	d3 = myArr['download_count'];
+	parseInt(d3) = myArr['download_count'];
   }
 };
 xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17469299", true);
@@ -44,7 +44,7 @@ xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr = JSON.parse(this.responseText);
     document.getElementById("status4").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
-	d4 = myArr['download_count'];
+	parseInt(d4) = myArr['download_count'];
   }
 };
 xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17457240", true);
@@ -57,7 +57,7 @@ xmlhttp.onreadystatechange = function() {
     var myArr = JSON.parse(this.responseText);
 	
     document.getElementById("status5").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
-     d5 = myArr['download_count'];
+     parseInt(d5) = myArr['download_count'];
      total = parseInt(d1) +  parseInt(d2) +  parseInt(d3) +  parseInt(d4) +  parseInt(d5);  
      document.getElementById("status6").innerHTML = "<br><br>Total:&nbsp&nbsp" + "<b>" + total + "</b>";	  
 	  
