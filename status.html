@@ -53,9 +53,9 @@ var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr = JSON.parse(this.responseText);
-	total = total + myArr['download_count'];
-    document.getElementById("status5").innerHTML = myArr['name'] + "\t\t\t" + "<b>" + myArr['download_count'] + "</b> <br><br> Total:\t" + "<b>" + total + "</b>";
 	
+    document.getElementById("status5").innerHTML = myArr['name'] + "\t\t\t" + "<b>" + myArr['download_count'] + "</b> <br><br> Total:\t" + "<b>" + total + "</b>";
+     total = total + myArr['download_count'];
   }
 };
 xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17457241", true);
