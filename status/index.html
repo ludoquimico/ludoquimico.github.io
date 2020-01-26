@@ -59,10 +59,12 @@ xmlhttp.onreadystatechange = function() {
     document.getElementById("status5").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
     d5 = myArr['download_count'];
 	  
+	  
+  }
+
      total = parseInt(d1) +  parseInt(d2) +  parseInt(d3) +  parseInt(d4) +  parseInt(d5);
 	  
-     document.getElementById("status6").innerHTML = "<br><br><i>Total</i>:&nbsp&nbsp" + "<b>" + parseInt(total) + "</b>";	  
-  }
+     document.getElementById("status6").innerHTML = "<br><br><i>Total</i>:&nbsp&nbsp" + "<b>" + parseInt(total) + "</b>";	
 	
 };
 	
