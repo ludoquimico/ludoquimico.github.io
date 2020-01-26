@@ -5,13 +5,14 @@
 <script>
 	
 var total = 0;
-var d1,d2,d3,d4,d5,d6 = 0;
+
 
 var xmlhttp1 = new XMLHttpRequest();
 xmlhttp1.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr1 = JSON.parse(this.responseText);
     document.getElementById("status1").innerHTML = myArr1['name'] + "&nbsp&nbsp" + "<b>" + myArr1['download_count'] + "</b>";
+    var d1 = 0;
     d1 = parseInt(myArr1['download_count']);
     total = total + d1;
   }
@@ -24,6 +25,7 @@ xmlhttp2.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr2 = JSON.parse(this.responseText);
     document.getElementById("status2").innerHTML = myArr2['name'] + "&nbsp&nbsp" + "<b>" + myArr2['download_count'] + "</b>";
+    var d2 = 0;
     d2 = parseInt(myArr2['download_count']);
     total = total + d2;
   }
@@ -36,6 +38,7 @@ xmlhttp3.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr3 = JSON.parse(this.responseText);
     document.getElementById("status3").innerHTML = myArr3['name'] + "&nbsp&nbsp" + "<b>" + myArr3['download_count'] + "</b>";
+    var d3 = 0;
     d3 = parseInt(myArr3['download_count']);
     total = total + d3;
   }
@@ -48,6 +51,7 @@ xmlhttp4.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr4 = JSON.parse(this.responseText);
     document.getElementById("status4").innerHTML = myArr4['name'] + "&nbsp&nbsp" + "<b>" + myArr4['download_count'] + "</b>";
+    var d4 = 0;
     d4 = parseInt(myArr4['download_count']);
     total = total + d4;
   }
@@ -60,6 +64,7 @@ xmlhttp5.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     var myArr5 = JSON.parse(this.responseText);
     document.getElementById("status5").innerHTML = myArr5['name'] + "&nbsp&nbsp" + "<b>" + myArr5['download_count'] + "</b><br><br>";
+    var d5 = 0;
     d5 = parseInt(myArr5['download_count']);
     total = total + d5;  
   }	
