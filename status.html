@@ -58,10 +58,10 @@ xmlhttp.onreadystatechange = function() {
 	
     document.getElementById("status5").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
      d5 = myArr['download_count'];
-	total = d1 + d2 + d3 + d4 + d5;  
-     document.getElementById("status6").innerHTML = "<br><br>Total:&nbsp&nbsp" + "<b>" + total + "</b>";	
-
   }
+     total = d1 + d2 + d3 + d4 + d5;  
+     document.getElementById("status6").innerHTML = "<br><br>Total:&nbsp&nbsp" + "<b>" + total + "</b>";	
+	
 };
 	
 xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases/assets/17457241", true);
