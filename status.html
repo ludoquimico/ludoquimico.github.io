@@ -4,7 +4,6 @@
 
 <script>
 var total = 0;
-	
 var d1,d2,d3,d4,d5,d6 = 0;
 
 var xmlhttp = new XMLHttpRequest();
@@ -60,7 +59,7 @@ xmlhttp.onreadystatechange = function() {
     document.getElementById("status5").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
      d5 = myArr['download_count'];
 	total = d1 + d2 + d3 + d4 + d5;  
-     document.getElementById("status6").innerHTML = "<hr><br><br>Total:&nbsp&nbsp" + "<b>" + total + "</b>";	
+     document.getElementById("status6").innerHTML = "<br><br><br>Total:&nbsp&nbsp" + "<b>" + total + "</b>";	
 
   }
 };
