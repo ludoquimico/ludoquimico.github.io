@@ -57,6 +57,7 @@ xmlhttp.onreadystatechange = function() {
 	
     document.getElementById("status5").innerHTML = myArr['name'] + "&nbsp&nbsp" + "<b>" + myArr['download_count'] + "</b>";
      total = total + myArr['download_count'];
+	  document.getElementById("status6").innerHTML = "<hr><br><br>Total:&nbsp&nbsp" + "<b>" + total + "</b>";	
 
   }
 };
@@ -65,7 +66,7 @@ xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github
 xmlhttp.send();	
 
 	
-	document.getElementById("status6").innerHTML = "<hr><br><br>Total:&nbsp&nbsp" + "<b>" + total + "</b>";	
+
 	
 	
 	
