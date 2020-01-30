@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 <style>
 		table {border: 2px solid #501070;}
@@ -19,7 +20,11 @@
 
 <body>
 
-    <div id="mypanel"></div>
+<table>
+<tr><th><div id="grafico"></div></th></tr>
+<tr><th><div id="mypanel"></div></th></tr>	
+  
+</table>    
 
     <script>
 
@@ -27,13 +32,47 @@
 	xmlhttp.onreadystatechange = function() {
 	  if (this.readyState == 4 && this.status == 200) {
 	    var myObj = JSON.parse(this.responseText);
-	          document.getElementById("mypanel").innerHTML = "<table><tr><th><img src='https://ludoquimico.github.io/img/logo_linux.png'><img src='https://ludoquimico.github.io/img/ubuntu.png'></th><th>" + myObj[0].assets[0].name + " </th> " + "<th><b>" + parseInt(myObj[0].assets[0].download_count) + "</b>" + "</th></tr>" + "<tr><th><img src='https://ludoquimico.github.io/img/logo_raspberry.png'><img src='https://ludoquimico.github.io/img/debian.png'></th><th>" + myObj[0].assets[1].name + "</th>" + "<th><b>" + parseInt(myObj[0].assets[1].download_count) + "</b></th>" + "</tr>" + "<tr><th><img src='https://ludoquimico.github.io/img/logo_linux.png'><img src='https://ludoquimico.github.io/img/debian.png'></th><th>" + myObj[0].assets[2].name + "</th>" + "<th><b>" + parseInt(myObj[0].assets[2].download_count) + "</b>" + "</th></tr>" + "<tr><th><img src='https://ludoquimico.github.io/img/logo_winxp.png'></th><th>" + myObj[0].assets[3].name + "</th>" + "<th><b>" + parseInt(myObj[0].assets[3].download_count) + "</b>" + "</th></tr>" + "<tr><th><img src='https://ludoquimico.github.io/img/logo_windows.png'></th><th>" + myObj[0].assets[4].name + "</th>" + "<th><b>" + parseInt(myObj[0].assets[4].download_count) + "</b></th>" + "</tr>" + "<tr><th><img src='https://ludoquimico.github.io/img/icon2.png'></th>" + "<th>Total:</th><th> <b>" + (parseInt(myObj[0].assets[0].download_count) + parseInt(myObj[0].assets[1].download_count) + parseInt(myObj[0].assets[2].download_count) + parseInt(myObj[0].assets[3].download_count) + parseInt(myObj[0].assets[4].download_count)) + "</b></th></tr></table>";
+
+	    
+	    document.getElementById("mypanel").innerHTML = "<center><table><tr><th><img src='https://ludoquimico.github.io/img/logo_linux.png'><img src='https://ludoquimico.github.io/img/ubuntu.png'></th><th>" + myObj[0].assets[0].name + " </th> " + "<th><b>" + parseInt(myObj[0].assets[0].download_count) + "</b>" + "</th></tr>" + "<tr><th><img src='https://ludoquimico.github.io/img/logo_raspberry.png'><img src='https://ludoquimico.github.io/img/debian.png'></th><th>" + myObj[0].assets[1].name + "</th>" + "<th><b>" + parseInt(myObj[0].assets[1].download_count) + "</b></th>" + "</tr>" + "<tr><th><img src='https://ludoquimico.github.io/img/logo_linux.png'><img src='https://ludoquimico.github.io/img/debian.png'></th><th>" + myObj[0].assets[2].name + "</th>" + "<th><b>" + parseInt(myObj[0].assets[2].download_count) + "</b>" + "</th></tr>" + "<tr><th><img src='https://ludoquimico.github.io/img/logo_winxp.png'></th><th>" + myObj[0].assets[3].name + "</th>" + "<th><b>" + parseInt(myObj[0].assets[3].download_count) + "</b>" + "</th></tr>" + "<tr><th><img src='https://ludoquimico.github.io/img/logo_windows.png'></th><th>" + myObj[0].assets[4].name + "</th>" + "<th><b>" + parseInt(myObj[0].assets[4].download_count) + "</b></th>" + "</tr>" + "<tr><th><img src='https://ludoquimico.github.io/img/icon2.png'></th>" + "<th>Total:</th><th> <b>" + (parseInt(myObj[0].assets[0].download_count) + parseInt(myObj[0].assets[1].download_count) + parseInt(myObj[0].assets[2].download_count) + parseInt(myObj[0].assets[3].download_count) + parseInt(myObj[0].assets[4].download_count)) + "</b></th></tr></table></center>";
+	          
+var data = [{
+  values: [parseInt(myObj[0].assets[0].download_count), parseInt(myObj[0].assets[1].download_count), parseInt(myObj[0].assets[2].download_count), parseInt(myObj[0].assets[3].download_count), parseInt(myObj[0].assets[4].download_count)],
+  labels: ['Linux v1', 'Raspberrry Pi v2', 'Linux v2', 'Windows v1', 'Windows v2'],
+  type: 'pie'
+}];
+
+var layout = {
+  height: 400,
+  width: 400,
+  showlegend: false,
+};
+	
+Plotly.newPlot('grafico', data, layout);			
+	          
+         
+	          
 	  }
 	};
+	
+
+	
 	xmlhttp.open("GET", "https://api.github.com/repos/ludoquimico/ludoquimico.github.io/releases", true);
+
+
+
 	xmlhttp.send(); 
 
     </script>
     
 </body>
 </html>
+
+
+
+
+
+
+
+
+
