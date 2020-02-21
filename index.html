@@ -53,7 +53,41 @@ box_intro{
 					<box_intro>
 			    		<h3>
 					<center><img src="https://ludoquimico.github.io/img/avatar.png" alt="avatar"></center>
-<br><br>
+<br>
+
+<center>
+<div class="w3-content w3-section" style="max-width:640px">
+  <img class="mySlides" src="https://ludoquimico.github.io/demo/img1.png" style="width:100%">
+  <img class="mySlides" src="https://ludoquimico.github.io/demo/img2.png" style="width:100%">
+  <img class="mySlides" src="https://ludoquimico.github.io/demo/img3.png" style="width:100%">
+  <img class="mySlides" src="https://ludoquimico.github.io/demo/img4.png" style="width:100%">
+  <img class="mySlides" src="https://ludoquimico.github.io/demo/img5.png" style="width:100%">
+
+  <img class="mySlides" src="https://ludoquimico.github.io/demo/img6.png" style="width:100%">
+  <img class="mySlides" src="https://ludoquimico.github.io/demo/img7.png" style="width:100%">
+  <img class="mySlides" src="https://ludoquimico.github.io/demo/img8.png" style="width:100%">
+  <img class="mySlides" src="https://ludoquimico.github.io/demo/img9.png" style="width:100%">
+  <img class="mySlides" src="https://ludoquimico.github.io/demo/img10.png" style="width:100%">
+</div>
+</center>
+<br>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 6000); // Change image every 6 seconds
+}
+</script>						
 					<center><b>Ludo Químico</b> é uma recompilação do game original criado pelo doutorando Manoel Guerreiro (UNICAMP/2019), enquanto aluno de graduação (Licenciatura em Química - 2009) pelo Instituto de Química - UNESP/Araraquara. Trata-se de um jogo digital educativo baseado na mecânica do antigo jogo indiano Pachisi. Respondendo corretamente às questões de Química (uma espécie de simulado), o jogador movimenta o personagem pelo tabuleiro do jogo até o seu final. As questões dos desafios tomam como base o ENEM (Exame Nacional do Ensino Médio) e os principais vestibulares realizados no Brasil. <br><br>Bom estudo e boa diversão!</center>
 
 
