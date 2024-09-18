@@ -47,6 +47,27 @@ box_intro{
   margin-right: auto;
   margin-left: auto;
 }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea {
+            width: 60%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+	
 </style>
 
 <br>
@@ -97,7 +118,18 @@ function carousel() {
 								Faça um PIX para o desenvolvedor.
 	<img src="https://ludoquimico.github.io/img/pix_ludoquimico.png">
 								<br>
-								PIX Copia e Cola:
+ <textarea id="meuTexto" readonly placeholder="PIX">00020126740014br.gov.bcb.pix0128manoelguerreiro@yahoo.com.br0220Projeto Ludo Quimico5204000053039865802BR5925MANOEL AUGUSTO DA SILVA G6010ARARAQUARA62490511LudoQuimico50300017br.gov.bcb.brcode01051.0.063044D9F</textarea>
+    <br>
+    <button onclick="copiarTexto()">PIX Copia e Cola !</button>
+
+    <script>
+        function copiarTexto() {
+            const textarea = document.getElementById("meuTexto");
+            textarea.select();
+            document.execCommand("copy");
+            alert("PIX copiado para a área de transferência!");
+        }
+    </script>							
 								<br>
 	<center>
 		<br><br>
